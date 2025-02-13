@@ -76,6 +76,33 @@
 この手順を実施することで、高確率で描画が正常に完了しないウィンドウが確認できるはずです。
 
 
+## 現状バージョンでの対策
 
+最小レベルのコンポーネントであれば、
+自動マクロの「アクティブウィンドウの切り替え」からも呼び出すように修正し、
+以下のようなrenderpanecommandの組み合わせによって、一時的に描画の乱れを解消できるかもしれません。
 
+```javascript
+// test.mac
+
+renderpanecommand({
+    target: "testBugPane",
+    show: 0,
+});
+
+renderpanecommand({
+    target: "testBugPane",
+    show: 1,
+    uri: currentmacrodirectory() + "\\test.html",
+    place: "overlay",
+    align: "right",
+    initialize: "async",
+    x: 100,
+    y: 100,
+    cx: 100,
+    cy: 100
+});
+```
+
+しかし、コンポーネントが大きくなると、アクティブウィンドウを切り替えるたびにリセットが必要になるため、現実的な解決策とは言えなくなる可能性があります。
 
