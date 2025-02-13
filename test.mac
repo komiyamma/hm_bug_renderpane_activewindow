@@ -1,0 +1,17 @@
+﻿jsmode "JScript\\" + currentmacrofilename;
+
+js {
+
+    renderpanecommand({
+        target: "testBugPane",
+        show: 1,
+        uri: currentmacrodirectory() + "\\test.html",
+        place: "overlay",
+        align: "right",
+        initialize: "async",
+        x: 100,
+        y: 100,
+        cx: 100,
+        cy: 100
+    });
+}
