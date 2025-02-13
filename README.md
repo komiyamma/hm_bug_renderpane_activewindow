@@ -28,7 +28,10 @@
 
 ### 再現ムービー
 
-bug_movie.mp4 (動画では再現されていませんが、灰色の四角形で表示が終わるパターンも存在します。)
+リポジトリ内の「bug_movie.mp4」  
+ (※動画では再現されていませんが、灰色の四角形で表示が終わるパターンも存在します。  
+
+<a href="https://github.com/komiyamma/hm_bug_renderpane_activewindow/raw/refs/heads/main/bug_movie.mp4">動画ダウンロードのLink</a>
 
 ### 再現手順における備考
 
